@@ -1,0 +1,4 @@
+﻿  main.c
+e:\mosquito server\2016_mosquito_serv\2016_mosquito_serv\main.c(64): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  2016_Mosquito_Serv.vcxproj -> E:\mosquito server\2016_Mosquito_Serv\Debug\2016_Mosquito_Serv.exe
+  2016_Mosquito_Serv.vcxproj -> E:\mosquito server\2016_Mosquito_Serv\Debug\2016_Mosquito_Serv.pdb (Full PDB)
