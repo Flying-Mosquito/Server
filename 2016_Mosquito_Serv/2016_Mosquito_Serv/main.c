@@ -156,22 +156,30 @@ unsigned int __stdcall CompletionThread(LPVOID pComPort)
 		if (buf == makeRoom)
 		{
 			printf("Make Room");
+			// lobInfo.rCount++;
+			// lobInfo.roomInfo.opFlag++;
+			// lobInfo.roomInfo.uCount++;
 		}
 		else if (buf == joinRoom)
 		{
 			printf("Join Room");
+			// lobInfo.roomInfo.uCount++;
 		}
 		else if (buf == exitRoom)
 		{
-		printf("Exit Room");
+			printf("Exit Room");
+			// lobInfo.roomInfo.uCount--;
 		}
 		else if (buf == pReady)
 		{
 			printf("Ready");
+			// if (lobInfo.roomInfo.uCount == 4)
+			//		lobInfo.roomInfo.stNum;
 		}
 		else if (buf == pStart)
 		{
 			printf("Start");
+			// Send GameIP
 		}
 		
 
