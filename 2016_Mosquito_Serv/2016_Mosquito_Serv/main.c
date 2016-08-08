@@ -159,27 +159,100 @@ unsigned int __stdcall CompletionThread(LPVOID pComPort)
 			// lobInfo.rCount++;
 			// lobInfo.roomInfo.opFlag++;
 			// lobInfo.roomInfo.uCount++;
+			// PerIoData->wsaBuf.len = BytesTransferred;
+			// WSASend(PerHandleData->hClntSock, &(PerIoData->wsaBuf), 1, NULL, 0, NULL, NULL);
+			memset(&(PerIoData->overlapped), 0, sizeof(OVERLAPPED));
+			PerIoData->wsaBuf.len = BUFSIZE;
+			PerIoData->wsaBuf.buf = PerIoData->buffer;
+			flags = 0;
+			WSARecv(PerHandleData->hClntSock,
+				&(PerIoData->wsaBuf),
+				1,
+				NULL,
+				&flags,
+				&(PerIoData->overlapped),
+				NULL
+			);
+			
 		}
 		else if (buf == joinRoom)
 		{
 			printf("Join Room");
 			// lobInfo.roomInfo.uCount++;
+			// PerIoData->wsaBuf.len = BytesTransferred;
+			// WSASend(PerHandleData->hClntSock, &(PerIoData->wsaBuf), 1, NULL, 0, NULL, NULL);
+			memset(&(PerIoData->overlapped), 0, sizeof(OVERLAPPED));
+			PerIoData->wsaBuf.len = BUFSIZE;
+			PerIoData->wsaBuf.buf = PerIoData->buffer;
+			flags = 0;
+			WSARecv(PerHandleData->hClntSock,
+				&(PerIoData->wsaBuf),
+				1,
+				NULL,
+				&flags,
+				&(PerIoData->overlapped),
+				NULL
+			);
 		}
 		else if (buf == exitRoom)
 		{
 			printf("Exit Room");
 			// lobInfo.roomInfo.uCount--;
+			// PerIoData->wsaBuf.len = BytesTransferred;
+			// WSASend(PerHandleData->hClntSock, &(PerIoData->wsaBuf), 1, NULL, 0, NULL, NULL);
+			memset(&(PerIoData->overlapped), 0, sizeof(OVERLAPPED));
+			PerIoData->wsaBuf.len = BUFSIZE;
+			PerIoData->wsaBuf.buf = PerIoData->buffer;
+			flags = 0;
+			WSARecv(PerHandleData->hClntSock,
+				&(PerIoData->wsaBuf),
+				1,
+				NULL,
+				&flags,
+				&(PerIoData->overlapped),
+				NULL
+			);
 		}
 		else if (buf == pReady)
 		{
 			printf("Ready");
 			// if (lobInfo.roomInfo.uCount == 4)
-			//		lobInfo.roomInfo.stNum;
+			// lobInfo.roomInfo.stNum;
+			// PerIoData->wsaBuf = roomInfo.stNum;
+			// PerIoData->wsaBuf.len = BytesTransferred;
+			// WSASend(PerHandleData->hClntSock, &(PerIoData->wsaBuf), 1, NULL, 0, NULL, NULL);
+			memset(&(PerIoData->overlapped), 0, sizeof(OVERLAPPED));
+			PerIoData->wsaBuf.len = BUFSIZE;
+			PerIoData->wsaBuf.buf = PerIoData->buffer;
+			flags = 0;
+			WSARecv(PerHandleData->hClntSock,
+				&(PerIoData->wsaBuf),
+				1,
+				NULL,
+				&flags,
+				&(PerIoData->overlapped),
+				NULL
+			);
 		}
 		else if (buf == pStart)
 		{
 			printf("Start");
 			// Send GameIP
+			// PerIoData->wsaBuf = "4478";
+			// PerIoData->wsaBuf.len = BytesTransferred;
+			// WSASend(PerHandleData->hClntSock, &(PerIoData->wsaBuf), 1, NULL, 0, NULL, NULL);
+			memset(&(PerIoData->overlapped), 0, sizeof(OVERLAPPED));
+			PerIoData->wsaBuf.len = BUFSIZE;
+			PerIoData->wsaBuf.buf = PerIoData->buffer;
+			flags = 0;
+			WSARecv(PerHandleData->hClntSock,
+				&(PerIoData->wsaBuf),
+				1,
+				NULL,
+				&flags,
+				&(PerIoData->overlapped),
+				NULL
+			);
 		}
 		
 
